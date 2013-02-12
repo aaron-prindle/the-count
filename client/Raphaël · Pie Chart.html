@@ -1,0 +1,53 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>The Count</title>
+</head>
+<body>
+  <div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">The-Count</a>
+  </div>
+</div>
+  <div class="container-fluid">
+    {{> buttons}}
+    <div id="holder" class="span7"></div>
+    {{> info}}
+  </div>
+</body>
+
+<template name="partier">
+  <tr>
+    <th scope="row">{{type}}:</th>
+    <td>{{perc}}%</td>
+  </tr>
+</template>
+
+<template name="info">
+  <div id="info_container" class="span3">
+      <table id="party_table">
+    <tbody>
+     {{#each partiers}}
+      {{> partier}}
+      {{/each}}      
+    </tbody>
+    </table>
+    <span>Total:</span>
+    <span id="total_val">{{total}}</span>
+    <div id="alert_dude"></div>
+    <div id="alert_capacity"></div>
+  </div>
+</template>
+
+<template name="buttons">
+  <div id="button_container" class="span2">
+    <div id="male_buttons">
+    <input type="image" src="male-plus.png" class="add_boy" value="Add Boy" />
+    <input type="image" src="male-minus.png" class="subtract_boy" value="Subtract Boy" />
+    </div>
+    <div id="female_buttons">
+    <input type="image" src="female-plus.png" class="add_girl" value="Add Girl" />
+    <input type="image" src="female-minus.png" class="subtract_girl" value="Subtract Girl" />
+    </div>
+  </div>
+</template>

@@ -1,0 +1,32 @@
+<head>
+  <title>the-count</title>
+</head>
+
+<body>
+  {{> count}}
+</body>
+
+<template name="count">
+  {{#each partiers}}
+    {{> partier}}
+  {{/each}}
+  <input type="button" class="add_boy" value="Add Boy" />
+  <input type="button" class="subtract_boy" value="Subtract Boy" />
+  <input type="button" class="add_girl" value="Add Girl" />
+  <input type="button" class="subtract_girl" value="Subtract Girl" />
+  {{> total}}
+</template>
+
+<template name="partier">
+  <div class="partier">
+    <span class="type">{{type}}</span>
+    <span class="count">{{count}}</span>
+  </div>
+</template>
+
+<template name="total">
+  <div class="total">
+    <span class="total">{{total}}</span>
+  </div>
+</template>
+

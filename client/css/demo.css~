@@ -1,0 +1,27 @@
+body {
+    background: #333;
+    color: #fff;
+    font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+
+#holder {
+    height: 480px;
+    left: 50%;
+    margin: -240px 0 0 -320px;
+    position: absolute;
+    top: 50%;
+    width: 640px;
+    /* text-align: center; */
+}
+
+#info_container{
+    text-align: center;
+}
+
+#button_container{
+    text-align: center;
+}
+
+#party_table {
+        margin:0 auto;       
+}
